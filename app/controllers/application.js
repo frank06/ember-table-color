@@ -2,6 +2,21 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
   
+  actions: {
+    
+    assignColor(item) {
+      this.get('wrappedFilteredItems').forEach((wrapper) => {
+        if (wrapper.get('item') === item) {
+          wrapper.set('colored', 'colored');
+        } else {
+          wrapper.set('colored', null);
+        }
+      })
+      
+    }
+    
+  },
+  
   filteredItems: Ember.computed(() => {
     return [
       { title: "Item 1" },
