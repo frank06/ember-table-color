@@ -1,0 +1,5 @@
+<table>
+{{#each model as |wrapper|}}
+  {{ item-table-row model=wrapper.item class=wrapper.colored click=(action 'assignColor' wrapper.item) }}
+{{/each}}
+</table>
