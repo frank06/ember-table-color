@@ -1,7 +1,7 @@
 <h2 id="title">Table color</h2>
 
 <table>
-{{#each wrappedFilteredItems as |wrapper|}}
-  {{ item-table-row model=wrapper.item class=wrapper.colored click=(action 'assignColor' wrapper.item) }}
+{{#each filteredItems as |item|}}
+  {{ item-table-row model=item }}
 {{/each}}
 </table>
